@@ -15,12 +15,7 @@ module arb
     );
     
 reg [DAC_DATA_WIDTH-1:0] awg_rom [0:2**ADDR_WIDTH-1];
-/*
-initial
-begin
-    $readmemh("memory_test_hex.mem", awg_rom,0,2**ADDR_WIDTH-1);
-end
-*/
+
 //initialize memrory
 always@(posedge wclk)
 begin
@@ -33,8 +28,7 @@ end
 
 reg [ADDR_WIDTH-1:0]raddr = 0;
 reg [13:0] dac_out;
-reg [13:0] dac_out_pipe0;
-reg [13:0] dac_out_pipe1;
+reg [13:0] dac_out_pipe;
 always @(posedge dac_clk)
 begin
     if(!rst_n)
@@ -43,9 +37,8 @@ begin
     begin
         if(re)
         begin
-            dac_out_pipe0 <= awg_rom[raddr];
-            dac_out_pipe1 <= dac_out_pipe0;
-            dac_out <= dac_out_pipe1;
+            dac_out_pipe <= awg_rom[raddr];
+            dac_out <= dac_out_pipe;
             raddr <= raddr + 1;
         end
     end
@@ -68,7 +61,7 @@ generate
       ODDR ODDR_inst(
         .Q(dac_dat_o[j]),
         .D1(dac_out[j]),
-        .D2(dac_out[j]),
+        .D2(1'b0),
         .C(dac_clk),
         .CE(1'b1),
         .R(1'b0),
