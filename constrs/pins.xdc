@@ -1,9 +1,10 @@
+#DAC clock
 set_property IOSTANDARD DIFF_HSTL_I_18 [get_ports adc_clk_p_0]
 set_property IOSTANDARD DIFF_HSTL_I_18 [get_ports adc_clk_n_0]
 set_property PACKAGE_PIN U18 [get_ports adc_clk_p_0]
 set_property PACKAGE_PIN U19 [get_ports adc_clk_n_0]
 create_clock -period 8.000 -name adc_pclk [get_ports adc_clk_p_0]
-#ony the p port needs to be constrained for differential clock
+#only the p port needs to be constrained for differential clocks
 
 
 #DAC
