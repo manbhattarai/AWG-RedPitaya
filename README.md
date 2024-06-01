@@ -5,5 +5,7 @@ An arbitrary waveform generator is implemented in the FPGA of Red Pitaya. A text
 The project is aimed at the Red Pitaya STEM 14 board running the Zynq 7010 FPGA. 
 The AWG.tcl file can be read from Vivado to recreate the project with the block diagram. The srcs and constrs folder need to be copied at the same path as the tcl file.
 
-Alternatively, bit files that have been precompiled can be directly loaded onto the FPGA. There aree ttow bit files, outputing at 5 MSPs and 125 MSps rates.
+Alternatively, bit files located in the bits folder that have been pre-compiled can be directly loaded onto the FPGA. The two bit files create arbitrary waveform generators that output at 5 and 125 MHz MSps.
+
+
 
