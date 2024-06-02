@@ -72,7 +72,8 @@ int main(int argc, char * argv[])
     *we_data = 1;
     *re_data = 0;
     int N = atoi(argv[1]);
-    char fname[32] = argv[2];
+    char fname[32];
+    strcpy(fname, argv[2]);
     int buffer[131072];
 
     FILE *f0;
@@ -95,7 +96,7 @@ int main(int argc, char * argv[])
 
     *we_data = 0;
     *re_data = 1;
-    print("Loading successful.\n"); 
+    printf("Loading successful.\n"); 
 
     munmap(data_in_map,32768);
     munmap(re_map,32768);
