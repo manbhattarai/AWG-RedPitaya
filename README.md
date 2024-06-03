@@ -7,7 +7,7 @@ The AWG.tcl file can be read from Vivado to recreate the project with the block 
 
 Alternatively, bit files located in the bits folder that have been pre-compiled can be directly loaded onto the FPGA. The two bit files create arbitrary waveform generators that output at 5 and 125 MHz MSps.
 
-The c file awg_load.c can be compiled and run from the PS part of the FPGA to load any waveform to be generated from the AWG. The example folder contains a Python file to generate the arbiraty waveform file to be used with the awg_load.c file. The arbitrary waveform file is 2^16 in length.
+The C file awg_load.c can be compiled and run from the PS part of the FPGA to load any waveform to be generated from the AWG. The example folder contains a Python file to generate the arbiraty waveform file to be used with the awg_load.c file. The arbitrary waveform file is 2^16 in length.
 
 
 
