@@ -9,5 +9,7 @@ Alternatively, bit files located in the bits folder that have been pre-compiled 
 
 The C file awg_load.c can be compiled and run from the PS part of the FPGA to load any waveform to be generated from the AWG. The example folder contains a Python file to generate the arbiraty waveform file to be used with the awg_load.c file. The arbitrary waveform file is 2^16 in length.
 
+## awg_load 65536 awg_double_lor.csv
+
 
 
