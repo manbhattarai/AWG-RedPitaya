@@ -11,7 +11,7 @@ The C file awg_load.c can be compiled and run from the PS part of the FPGA to lo
 
 <div>
   <button class="copy-button" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)"></button>
-  <pre><code> gcc awg_load.c -o awg_load 
+  <pre><code> gcc awg_load.c -o awg_load <br>
     ./awg_load 65536 awg_double_lor.csv
   </code></pre>
 </div>
