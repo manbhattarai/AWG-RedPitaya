@@ -16,9 +16,6 @@ The C file awg_load.c can be compiled and run from the PS part of the FPGA to lo
   </code></pre>
 </div>
 
-` root@rp# gcc awg_load.c -o awg_load `
-
-`root@rp# ./awg_load 65536 awg_double_lor.csv`
 
 The example folder also contains image of an arbitrary waveform generated with a 5MSps and 125MSps FPGA images.
 
